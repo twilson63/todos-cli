@@ -1,4 +1,5 @@
-//const { nth } = require('ramda')
+#!/usr/bin/env node
+
 const [execPath, jsPath, cmd, ...rest] = process.argv
 
 // commands
