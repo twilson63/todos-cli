@@ -3,11 +3,11 @@
 const [execPath, jsPath, cmd, ...rest] = process.argv
 
 // commands
-const help = require('./help')
-const ls = require('./ls')
-const add = require('./add')
-const rm = require('./rm')
-const check = require('./check')
+const help = require('./cmds/help')
+const ls = require('./cmds/ls')
+const add = require('./cmds/add')
+const rm = require('./cmds/rm')
+const check = require('./cmds/check')
 
 // print result
 console.log(handle(cmd))

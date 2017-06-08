@@ -1,5 +1,4 @@
-const store = require('./store')
-const render = require('./render')
+const { store, render } = require('../lib')
 
 module.exports = function () {
   const todos = store.get()

@@ -1,6 +1,5 @@
-const store = require('./store')
+const { store, render } = require('../lib')
 const { append, join, compose } = require('ramda')
-const render = require('./render')
 
 module.exports = function (text) {
   const todos = store.get()

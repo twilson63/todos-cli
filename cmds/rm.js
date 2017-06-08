@@ -1,6 +1,5 @@
-const store = require('./store')
+const { store, render } = require('../lib')
 const { reject, propEq, not } = require('ramda')
-const render = require('./render')
 
 module.exports = function (id) {
   store.set(
