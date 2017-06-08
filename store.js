@@ -5,7 +5,7 @@ module.exports = {
 }
 
 function get () {
-  return JSON.parse(fs.readFileSync('./todos.json', 'utf-8'))
+  return JSON.parse(fs.readFileSync('./todos.json', 'utf-8') || [])
 }
 
 function set (data) {
