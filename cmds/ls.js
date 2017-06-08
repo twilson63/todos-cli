@@ -15,7 +15,6 @@ const remaining = compose(
 
 function render () {
   const todos = store.get()
-  
   return `
 Todos
 ------------------------
@@ -26,5 +25,5 @@ ${remaining(todos)} remaining
 }
 
 function li (todo) {
-  return `[${todo.completed ? 'X' : ' ' }] - ${todo.id} ${todo.text}`
+  return `[${todo.completed ? 'X' : ' '}] - ${todo.id} ${todo.text}`
 }

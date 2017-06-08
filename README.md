@@ -77,6 +77,11 @@ MIT
 
 * Contributions are welcome - submit a PR
 
+## Styleguide
+
+* standardjs
+* fun-fp linter
+
 ## Project Structure
 
 * `index.js` - main executable file

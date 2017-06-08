@@ -1,19 +1,36 @@
 const { store } = require('../lib')
-const { map, propEq } = require('ramda')
+const { map, curry } = require('ramda')
 const ls = require('./ls')
 
+const propEq = curry(function (prop, value, object) {
+  return object[prop] === value
+})
+
 module.exports = function (id) {
+  // eslint-disable-next-line
   store.set(
     map(
-      todo => propEq('id', parseInt(id, 10), todo) ?
-        toggleComplete(todo) : todo,
+      ifElse(propEq('id', parseInt(id, 10)), toggleComplete, identity),
       store.get()
     )
   )
   return ls()
 }
 
+function ifElse (cond, success, reject) {
+  return function (todo) {
+    if (cond(todo)) {
+      return success(todo)
+    } else {
+      return reject(todo)
+    }
+  }
+}
+
+function identity (x) {
+  return x
+}
+
 function toggleComplete (todo) {
-  todo.completed = !todo.completed
-  return todo
+  return {...todo, completed: !todo.completed}
 }
