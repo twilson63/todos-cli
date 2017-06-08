@@ -1,5 +1,6 @@
-const { store, render } = require('../lib')
+const { store } = require('../lib')
 const { map, propEq } = require('ramda')
+const ls = require('./ls')
 
 module.exports = function (id) {
   store.set(
@@ -9,7 +10,7 @@ module.exports = function (id) {
       store.get()
     )
   )
-  return render(store.get())
+  return ls()
 }
 
 function toggleComplete (todo) {

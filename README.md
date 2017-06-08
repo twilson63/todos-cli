@@ -88,4 +88,3 @@ MIT
 * `cmds/help.js` - `todo help` command handler
 * lib - contains the library functions
 * `lib/store` - storage library - get/set
-* `lib/render` - render todo list library function

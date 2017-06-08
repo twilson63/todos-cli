@@ -1,5 +1,6 @@
-const { store, render } = require('../lib')
 const { append, join, compose } = require('ramda')
+const { store } = require('../lib')
+const ls = require('./ls')
 
 module.exports = function (text) {
   const todos = store.get()
@@ -9,7 +10,7 @@ module.exports = function (text) {
       store.get()
     )
   )
-  return render(store.get())
+  return ls()
 }
 
 function createTodo(text, id) {

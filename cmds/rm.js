@@ -1,5 +1,6 @@
-const { store, render } = require('../lib')
+const { store } = require('../lib')
 const { reject, propEq, not } = require('ramda')
+const ls = require('./ls')
 
 module.exports = function (id) {
   store.set(
@@ -8,5 +9,5 @@ module.exports = function (id) {
       store.get()
     )
   )
-  return render(store.get())
+  return ls()
 }
