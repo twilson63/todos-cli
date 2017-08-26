@@ -1,7 +1,7 @@
 {
   "name": "todos-cli",
   "version": "2.0.2",
-  "description": "",
+  "description": "A project todo list app.",
   "main": "index.js",
   "bin": {
     "todo": "index.js"
@@ -26,5 +26,16 @@
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilson63/todos-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twilson63/todos-cli/issues"
+  },
+  "homepage": "https://github.com/twilson63/todos-cli#readme"
 }
