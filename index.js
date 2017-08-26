@@ -8,12 +8,15 @@ const ls = require('./cmds/ls')
 const add = require('./cmds/add')
 const rm = require('./cmds/rm')
 const check = require('./cmds/check')
+const init = require('./cmds/init')
 
 // print result
 console.log(handle(cmd))
 
 function handle(cmd) {
   switch (cmd) {
+    case 'init':
+      return init()
     case 'check':
       return check(rest)
     case 'rm':
